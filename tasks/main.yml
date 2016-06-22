@@ -1,0 +1,25 @@
+---
+
+- name: Install postfix and utilities
+  become: yes
+  apt:
+    name={{ item }}
+    state=installed
+  with_items:
+    - mailutils
+
+- name: Configure postfix
+  become: yes
+  copy:
+    src=postfix.cf
+    dest=/etc/postfix/main.cf
+  notify: Restart postfix
+
+- name: Set postfix name
+  become: yes
+  lineinfile:
+    dest=/etc/mailname
+    line={{ postfix_fqdn }}
+    state=present
+    create=yes
+  notify: Restart postfix

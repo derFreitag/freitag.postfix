@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Gil Forcada
+  description: Ansible role to install and configure postfix
+  company: der Freitag
+  license: license (GPLv3)
+  min_ansible_version: 2.1
+  platforms:
+    - name: Ubuntu
+      versions:
+        - xenial
+  galaxy_tags:
+    - system
+    - mail
+  dependencies: []
