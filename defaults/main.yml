@@ -1,2 +1,2 @@
 ---
-postfix_fdqn: mail.example.com
+postfix_fqdn: mail.example.com

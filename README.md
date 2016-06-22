@@ -8,7 +8,7 @@ None
 
 Role Variables
 --------------
-``postfix_fdqn``: set postfix domain (it will go to ``/etc/mailname``).
+``postfix_fqdn``: set postfix domain (it will go to ``/etc/mailname``).
 
 Dependencies
 ------------
@@ -21,7 +21,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: freitag.postfix, postfix_fdqn: mail.example.com }
+         - { role: freitag.postfix, postfix_fqdn: mail.example.com }
 
 License
 -------
